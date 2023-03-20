@@ -24,7 +24,7 @@ function myFunction() {
 
 
 
-
+//Fetching Data
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => {
@@ -36,13 +36,13 @@ fetch("https://jsonplaceholder.typicode.com/users")
   })
   .then(data => {
     console.log(data);
-    Object(data)
+    Array(data)
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
-
+//Displaying Data
   function displayChart(data) {
-    const name = data.name[0];
+    const name = data.Object[0];
    
     const tableDiv = document.getElementById("table");
   
