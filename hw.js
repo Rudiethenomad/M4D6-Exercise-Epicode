@@ -25,7 +25,10 @@ function buttonFunction() {
 
 
 //Fetching Data
+//let data =[{"id": 0,"name": "Username","email": "address"}]
 
+//async function getResponse(){
+   // const response= await
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => {
     if (response.ok) {
@@ -39,15 +42,24 @@ fetch("https://jsonplaceholder.typicode.com/users")
     Array(data)
   })
   .catch((error) => console.error("FETCH ERROR:", error));
+    
+//};
+//console.log(data);
+
+
 
 //Displaying Data
+
   function displayChart(data) {
-    const name = data.Object[0];
+    const name = data.Array[0];
    
     const tableDiv = document.getElementById("table");
   
-    const individualName = name.str;
+    //const individualName = name.str;
     const heading = document.createElement("h1");
     heading.innerHTML = tableDiv;
     tableDiv.appendChild(heading);
   }
+
+  
+ 
