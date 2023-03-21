@@ -22,13 +22,14 @@ function buttonFunction() {
 
 
 
-
+//class at 30 minutes 20-3-23
 
 //Fetching Data
 //let data =[{"id": 0,"name": "Username","email": "address"}]
 
 //async function getResponse(){
    // const response= await
+   window.onload = function (event){
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => {
     if (response.ok) {
@@ -39,9 +40,10 @@ fetch("https://jsonplaceholder.typicode.com/users")
   })
   .then(data => {
     console.log(data);
-    Array(data)
+    displayChart(data);
   })
   .catch((error) => console.error("FETCH ERROR:", error));
+}
     
 //};
 //console.log(data);
@@ -51,7 +53,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 //Displaying Data
 
   function displayChart(data) {
-    const name = data.Array[0];
+//need to loop and do a forEachOf
    
     const tableDiv = document.getElementById("table");
   
