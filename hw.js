@@ -29,12 +29,20 @@ function buttonFunction() {
 
 //async function getResponse(){
    // const response= await
+   let container = document.getElementById("container");
+
+
+
+
    window.onload = function (event){
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => {
     if (response.ok) {
       return response.json();
-    } else {
+    }
+    
+    
+    else {
       throw new Error("NETWORK RESPONSE ERROR");
     }
   })
@@ -43,7 +51,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
     displayChart(data);
   })
   .catch((error) => console.error("FETCH ERROR:", error));
-}
+
     
 //};
 //console.log(data);
@@ -53,14 +61,19 @@ fetch("https://jsonplaceholder.typicode.com/users")
 //Displaying Data
 
   function displayChart(data) {
-//need to loop and do a forEachOf
-   
+//need to loop forEach
+.forEach(function(array){
+  counsole.log(array);
+  let tableBody = document.getElementById('tableBody');
+  tableBody.innerHTML =+ '<tr><td>' + count.id + '</td><td>' 
+})
+  
+
     const tableDiv = document.getElementById("table");
   
     //const individualName = name.str;
     const heading = document.createElement("h1");
     heading.innerHTML = tableDiv;
     tableDiv.appendChild(heading);
-  }
-
-  
+  };
+   }
