@@ -58,17 +58,31 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 
 //Displaying Data
-//the problem is here and line 64
+
+
+let i = 0;
+while (i < event.length){
+  console.log(data[i]);
+  i++
+ 
+}
+
   function displayChart(data) {
-//need to loop forEach
+
 data.forEach(function(data){
-  counsole.log(data);
-  let tableBody = document.getElementById('tableBody');
-  tableBody.innerHTML =+ '<tr><td>' + array.id + '</td><td>' + array.name +'</td><td>' + '</td><td>' + array.username + array.Email + '</td><td>' + array.address +'</td><td></tr>';
+  //counsole.log(data);
+
+
+
 
   
-});
+  let tableBody = document.getElementById('tableBody');
+  tableBody.innerHTML =+ '<tr><td>' + data.id + '</td><td>' + data.name +'</td><td>' + '</td><td>' + data.username +'</td><td>' + data.Email + '</td><td>' + data.address +'</td><td></tr>';
+
+  console.log(data)
   
+});
+
 
 
   
@@ -78,3 +92,4 @@ data.forEach(function(data){
     tableDiv.appendChild(heading);
   };
    }
+ 
