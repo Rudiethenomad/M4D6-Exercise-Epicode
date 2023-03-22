@@ -30,7 +30,7 @@ function buttonFunction() {
 //async function getResponse(){
    // const response= await
    let container = document.getElementById("container");
-
+   let tableDiv = document.getElementById("table");
 
 
 
@@ -53,23 +53,24 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .catch((error) => console.error("FETCH ERROR:", error));
 
     
-//};
-//console.log(data);
+
 
 
 
 //Displaying Data
-
+//the problem is here and line 64
   function displayChart(data) {
 //need to loop forEach
-.forEach(function(array){
-  counsole.log(array);
+data.forEach(function(data){
+  counsole.log(data);
   let tableBody = document.getElementById('tableBody');
-  tableBody.innerHTML =+ '<tr><td>' + count.id + '</td><td>' 
-})
+  tableBody.innerHTML =+ '<tr><td>' + array.id + '</td><td>' + array.name +'</td><td>' + '</td><td>' + array.username + array.Email + '</td><td>' + array.address +'</td><td></tr>';
+
+  
+});
   
 
-    const tableDiv = document.getElementById("table");
+
   
     //const individualName = name.str;
     const heading = document.createElement("h1");
